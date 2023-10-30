@@ -28,15 +28,11 @@ import {
   isTouchDevice,
   useRichTextEditorContext,
 } from "mui-tiptap";
-import { CommandButton1, CommandButton2 } from "./Components/CommandButton";
 
 export default function EditorMenuControls() {
   const editor = useRichTextEditorContext();
   return (
     <MenuControlsContainer>
-
-      <CommandButton1/>
-      <CommandButton2/>
       
       <MenuSelectHeading />
 
