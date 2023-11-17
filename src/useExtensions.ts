@@ -28,6 +28,7 @@ import { Text } from "@tiptap/extension-text";
 import { TextAlign } from "@tiptap/extension-text-align";
 import { TextStyle } from "@tiptap/extension-text-style";
 import { Underline } from "@tiptap/extension-underline";
+import InvisibleCharacters, { SpaceCharacter, HardBreakNode, InvisibleNode } from '@tiptap-pro/extension-invisible-characters'
 import { useMemo } from "react";
 import {
   FontSize,
@@ -102,6 +103,15 @@ export default function useRecommendedExtensions({
       TableImproved.configure({
         resizable: true,
       }),
+
+      InvisibleCharacters.configure({
+        visible: false,
+        builders: [
+          new SpaceCharacter(),
+          new HardBreakNode(),
+        ]
+      }),
+      
       TableRow,
       TableHeader,
       TableCell,
