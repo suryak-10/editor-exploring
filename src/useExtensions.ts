@@ -37,6 +37,7 @@ import {
   ResizableImage,
   TableImproved,
 } from "mui-tiptap";
+import StepExtension from "./Extensions/Stpes/StepExtension";
 
 export type UseRecommendedExtensionsOptions = {
   /** Placeholder hint to show in the text input area before a user types a message. */
@@ -115,6 +116,7 @@ export default function useRecommendedExtensions({
       TableRow,
       TableHeader,
       TableCell,
+      StepExtension,
 
       BulletList,
       CodeBlock,

@@ -28,7 +28,7 @@ import {
   isTouchDevice,
   useRichTextEditorContext,
 } from "mui-tiptap";
-import { MenuButton1, MenuButton2, MenuButton3 } from "./Components/MenuButton";
+import { MenuButton1, MenuButton2, MenuButton3, MenuButton4 } from "./Components/MenuButton";
 
 export default function EditorMenuControls() {
   const editor = useRichTextEditorContext();
@@ -38,6 +38,7 @@ export default function EditorMenuControls() {
       <MenuButton1 />
       <MenuButton2 />
       <MenuButton3 />
+      <MenuButton4 />
 
       <MenuSelectHeading />
 
