@@ -48,17 +48,8 @@ export default function Editor() {
           editable={isEditable}
           renderControls={() => <EditorMenuControls />}
           onCreate={({ editor }) => {
-            window.editor = editor;
+            // window.editor = editor;
           }}
-          // onTransaction={({ editor, transaction }) => {
-          //   if (editor) {
-          //     const { tr, apply } = editor.state;
-          //     const bold = editor.schema.marks.bold.create();
-          //     console.log(bold);
-          //     tr.setStoredMarks([bold]);
-          //     apply(tr);
-          //   }
-          // }}
           RichTextFieldProps={{
             MenuBarProps: {
               hide: !showMenuBar,
