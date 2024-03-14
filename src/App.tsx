@@ -20,7 +20,7 @@ export default function App() {
     "(prefers-color-scheme: dark)"
   );
   const [paletteMode, setPaletteMode] = useState<PaletteMode>(
-    systemSettingsPrefersDarkMode ? "dark" : "light"
+    systemSettingsPrefersDarkMode ? "light" : "dark"
   );
   const togglePaletteMode = useCallback(
     () =>

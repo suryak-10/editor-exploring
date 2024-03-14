@@ -38,6 +38,7 @@ import {
   TableImproved,
 } from "mui-tiptap";
 
+
 export type UseRecommendedExtensionsOptions = {
   /** Placeholder hint to show in the text input area before a user types a message. */
   placeholder?: string;
@@ -104,17 +105,20 @@ export default function useRecommendedExtensions({
         resizable: true,
       }),
 
-      InvisibleCharacters.configure({
-        visible: false,
-        builders: [
-          new SpaceCharacter(),
-          new HardBreakNode(),
-        ]
-      }),
-      
+      // InvisibleCharacters.configure({
+      //   visible: true,
+      //   injectCSS: true,
+      //   builders: [
+      //     new SpaceCharacter(),
+      //     new HardBreakNode(),
+      //   ]
+      // }),
+
+
       TableRow,
       TableHeader,
       TableCell,
+
 
       BulletList,
       CodeBlock,

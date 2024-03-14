@@ -8,8 +8,9 @@ import DoneIcon from "@mui/icons-material/Done";
 import React from "react";
 // import { Step } from '@tiptap/pm/transform';
 import { ReplaceStep, Step } from "prosemirror-transform";
-import { Fragment, Slice } from "@tiptap/pm/model";
+import { Fragment,  MarkType,  Slice } from "@tiptap/pm/model";
 import { insertText } from "./helpers/steps";
+import { Mark } from "@tiptap/core";
 
 export type MenuButtonTrackChangesProps = Partial<MenuButtonProps>;
 
@@ -67,9 +68,12 @@ export function MenuButton4(props: MenuButtonTrackChangesProps) {
       tooltipLabel="Accept change"
       IconComponent={() => <div> 4 </div>}
       onClick={() => {
-        // editor?.commands.hideInvisibleCharacters()
-        if (editor != null) {
-          insertText({ editor });
+        if (editor) {
+          const { tr, apply } = editor.state;
+          const bold = editor.schema.marks.bold.create();
+          console.log(bold);
+          tr.setStoredMarks([bold]);
+          apply(tr);
         }
       }}
       {...props}

@@ -124,6 +124,8 @@ export default function EditorMenuControls() {
 
       <MenuButtonUndo />
       <MenuButtonRedo />
+      
+      <MenuButton4 />
     </MenuControlsContainer>
   );
 }
