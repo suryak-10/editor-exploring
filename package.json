@@ -61,6 +61,7 @@
     "@tiptap/pm": "2.0.3",
     "@tiptap/react": "2.0.3",
     "@types/string.prototype.matchall": "^4.0.2",
+    "epic-table-of-contents": "^1.0.0",
     "escape-string-regexp": "^5.0.0",
     "katex": "^0.16.9",
     "mui-tiptap": "1.0.0",
