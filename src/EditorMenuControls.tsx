@@ -28,11 +28,14 @@ import {
   isTouchDevice,
   useRichTextEditorContext,
 } from "mui-tiptap";
+import InsertContentButton from "./components/InsertContentButton";
 
 export default function EditorMenuControls() {
   const editor = useRichTextEditorContext();
   return (
     <MenuControlsContainer>
+
+      <InsertContentButton />
 
       <MenuSelectHeading />
 

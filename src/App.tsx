@@ -56,7 +56,7 @@ export default function App() {
             ) : (
               <Brightness4Icon />
             )}
-          </IconButton>
+        </IconButton>
         </Toolbar>
       </AppBar>
 

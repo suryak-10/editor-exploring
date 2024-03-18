@@ -37,6 +37,9 @@ import {
   ResizableImage,
   TableImproved,
 } from "mui-tiptap";
+// import WordCount, { WordCountExtension } from "./Extensions/WordCount";
+
+import { EpicCharacterCountExtension } from 'epic-character-count';
 
 
 export type UseRecommendedExtensionsOptions = {
@@ -184,6 +187,15 @@ export default function useRecommendedExtensions({
       // We use the regular `History` (undo/redo) extension when not using
       // collaborative editing
       History,
+
+      EpicCharacterCountExtension.configure({
+        enabled: true,
+        includeCountOf: {
+          character: true,
+          sentence: false,
+          word: true,
+        }
+      })
     ];
   }, [placeholder]);
 }
