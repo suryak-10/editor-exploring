@@ -12,8 +12,9 @@ import {
   useMediaQuery,
   type PaletteMode,
 } from "@mui/material";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Editor from "./Editor";
+import { xmlParser } from "./utils/xmlParser";
 
 export default function App() {
   const systemSettingsPrefersDarkMode = useMediaQuery(
@@ -39,6 +40,10 @@ export default function App() {
       }),
     [paletteMode]
   );
+
+  useEffect(() => {
+    xmlParser();
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
