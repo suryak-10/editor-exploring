@@ -37,9 +37,7 @@ import {
   ResizableImage,
   TableImproved,
 } from "mui-tiptap";
-// import WordCount, { WordCountExtension } from "./Extensions/WordCount";
-
-import { EpicCharacterCountExtension } from 'epic-character-count';
+import { EpicCharacterCountExtension } from "epic-character-count";
 
 
 export type UseRecommendedExtensionsOptions = {
@@ -192,9 +190,10 @@ export default function useRecommendedExtensions({
         enabled: true,
         includeCountOf: {
           character: true,
-          sentence: false,
+          sentence: true,
           word: true,
-        }
+        },
+        
       })
     ];
   }, [placeholder]);

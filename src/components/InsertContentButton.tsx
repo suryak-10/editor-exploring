@@ -1,7 +1,6 @@
 import { Content } from '@tiptap/core';
-import { useRichTextEditorContext } from 'mui-tiptap'
-import React from 'react'
 import { WordCountKey, WordCountState } from 'epic-character-count';
+import { useRichTextEditorContext } from 'mui-tiptap';
 
 
 
@@ -55,8 +54,8 @@ const InsertContentButton = () => {
                     }
                 }}
             >Get word count</button>
-            <p>{wordCount?.word}</p>
-            <p>{wordCount?.character}</p>
+            <p> character :{wordCount?.character}</p>
+            <p> word :{wordCount?.word}</p>
         </div >
     )
 }
