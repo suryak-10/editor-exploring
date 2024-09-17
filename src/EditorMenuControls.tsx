@@ -28,6 +28,7 @@ import {
   isTouchDevice,
   useRichTextEditorContext,
 } from "mui-tiptap";
+import ReplaceStepButton from "./components/ReplaceStepButton";
 
 export default function EditorMenuControls() {
   const editor = useRichTextEditorContext();
@@ -47,6 +48,7 @@ export default function EditorMenuControls() {
       <MenuButtonItalic />
 
       <MenuButtonUnderline />
+      <ReplaceStepButton />
 
       <MenuButtonStrikethrough />
 

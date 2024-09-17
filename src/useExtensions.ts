@@ -37,6 +37,7 @@ import {
   ResizableImage,
   TableImproved,
 } from "mui-tiptap";
+import { ExamplePlugin } from "./plugins/ExamplePlugin";
 
 
 export type UseRecommendedExtensionsOptions = {
@@ -184,6 +185,7 @@ export default function useRecommendedExtensions({
       // We use the regular `History` (undo/redo) extension when not using
       // collaborative editing
       History,
+      // ExamplePlugin,
     ];
   }, [placeholder]);
 }
