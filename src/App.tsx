@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { useCallback, useMemo, useState } from "react";
 import Editor from "./Editor";
+import './global.css';
 
 export default function App() {
   const systemSettingsPrefersDarkMode = useMediaQuery(

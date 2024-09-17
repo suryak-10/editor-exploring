@@ -38,6 +38,7 @@ import {
   TableImproved,
 } from "mui-tiptap";
 import { ExamplePlugin } from "./plugins/ExamplePlugin";
+import { InsertMark } from "./plugins/TrackChangesMark";
 
 
 export type UseRecommendedExtensionsOptions = {
@@ -186,6 +187,7 @@ export default function useRecommendedExtensions({
       // collaborative editing
       History,
       // ExamplePlugin,
+      InsertMark,
     ];
   }, [placeholder]);
 }
