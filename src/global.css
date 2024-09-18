@@ -1,3 +1,9 @@
-ins {
+track[type="ins"] {
     color: green;
+    text-decoration: underline;
+}
+
+track[type="del"] {
+    color: red;
+    text-decoration: line-through;
 }

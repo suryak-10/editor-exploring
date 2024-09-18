@@ -38,7 +38,7 @@ import {
   TableImproved,
 } from "mui-tiptap";
 import { ExamplePlugin } from "./plugins/ExamplePlugin";
-import { InsertMark } from "./plugins/TrackChangesMark";
+import { TrackMark } from "./plugins/TrackChangesMark";
 
 
 export type UseRecommendedExtensionsOptions = {
@@ -186,8 +186,8 @@ export default function useRecommendedExtensions({
       // We use the regular `History` (undo/redo) extension when not using
       // collaborative editing
       History,
-      // ExamplePlugin,
-      InsertMark,
+      ExamplePlugin,
+      TrackMark,
     ];
   }, [placeholder]);
 }
