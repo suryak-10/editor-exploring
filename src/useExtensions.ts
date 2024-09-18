@@ -1,33 +1,33 @@
-import type { EditorOptions } from "@tiptap/core";
-import { Blockquote } from "@tiptap/extension-blockquote";
-import { Bold } from "@tiptap/extension-bold";
-import { BulletList } from "@tiptap/extension-bullet-list";
-import { Code } from "@tiptap/extension-code";
-import { CodeBlock } from "@tiptap/extension-code-block";
-import { Document } from "@tiptap/extension-document";
-import { Dropcursor } from "@tiptap/extension-dropcursor";
-import { Gapcursor } from "@tiptap/extension-gapcursor";
-import { HardBreak } from "@tiptap/extension-hard-break";
-import { History } from "@tiptap/extension-history";
-import { HorizontalRule } from "@tiptap/extension-horizontal-rule";
-import { Italic } from "@tiptap/extension-italic";
-import { Link } from "@tiptap/extension-link";
-import { ListItem } from "@tiptap/extension-list-item";
-import { OrderedList } from "@tiptap/extension-ordered-list";
-import { Paragraph } from "@tiptap/extension-paragraph";
-import { Placeholder } from "@tiptap/extension-placeholder";
-import { Strike } from "@tiptap/extension-strike";
-import { Subscript } from "@tiptap/extension-subscript";
-import { Superscript } from "@tiptap/extension-superscript";
-import { TableCell } from "@tiptap/extension-table-cell";
-import { TableHeader } from "@tiptap/extension-table-header";
-import { TableRow } from "@tiptap/extension-table-row";
-import { TaskItem } from "@tiptap/extension-task-item";
-import { TaskList } from "@tiptap/extension-task-list";
-import { Text } from "@tiptap/extension-text";
-import { TextAlign } from "@tiptap/extension-text-align";
-import { TextStyle } from "@tiptap/extension-text-style";
-import { Underline } from "@tiptap/extension-underline";
+// import type { EditorOptions } from "@tiptap/core";
+// import { Blockquote } from "@tiptap/extension-blockquote";
+// import { Bold } from "@tiptap/extension-bold";
+// import { BulletList } from "@tiptap/extension-bullet-list";
+// import { Code } from "@tiptap/extension-code";
+// import { CodeBlock } from "@tiptap/extension-code-block";
+// import { Document } from "@tiptap/extension-document";
+// import { Dropcursor } from "@tiptap/extension-dropcursor";
+// import { Gapcursor } from "@tiptap/extension-gapcursor";
+// import { HardBreak } from "@tiptap/extension-hard-break";
+// import { History } from "@tiptap/extension-history";
+// import { HorizontalRule } from "@tiptap/extension-horizontal-rule";
+// import { Italic } from "@tiptap/extension-italic";
+// import { Link } from "@tiptap/extension-link";
+// import { ListItem } from "@tiptap/extension-list-item";
+// import { OrderedList } from "@tiptap/extension-ordered-list";
+// import { Paragraph } from "@tiptap/extension-paragraph";
+// import { Placeholder } from "@tiptap/extension-placeholder";
+// import { Strike } from "@tiptap/extension-strike";
+// import { Subscript } from "@tiptap/extension-subscript";
+// import { Superscript } from "@tiptap/extension-superscript";
+// import { TableCell } from "@tiptap/extension-table-cell";
+// import { TableHeader } from "@tiptap/extension-table-header";
+// import { TableRow } from "@tiptap/extension-table-row";
+// import { TaskItem } from "@tiptap/extension-task-item";
+// import { TaskList } from "@tiptap/extension-task-list";
+// import { Text } from "@tiptap/extension-text";
+// import { TextAlign } from "@tiptap/extension-text-align";
+// import { TextStyle } from "@tiptap/extension-text-style";
+// import { Underline } from "@tiptap/extension-underline";
 import InvisibleCharacters, { SpaceCharacter, HardBreakNode, InvisibleNode } from '@tiptap-pro/extension-invisible-characters'
 import { useMemo } from "react";
 import {
@@ -37,6 +37,34 @@ import {
   ResizableImage,
   TableImproved,
 } from "mui-tiptap";
+import { Subscript } from './extensions/all/subscript';
+import { Superscript } from './extensions/all/superscript';
+import { Link } from './extensions/all/link';
+import { EditorOptions } from '@tiptap/core';
+import { TableRow } from './extensions/all/table-row';
+import { TableHeader } from './extensions/all/table-header';
+import { TableCell } from './extensions/all/table-cell';
+import { BulletList } from './extensions/all/bullet-list';
+import { CodeBlock } from './extensions/all/code-block';
+import { Document } from './extensions/all/document';
+import { HardBreak } from './extensions/all/hard-break';
+import { ListItem } from './extensions/all/list-item';
+import { OrderedList } from './extensions/all/ordered-list';
+import { Paragraph } from './extensions/all/paragraph';
+import { Bold } from './extensions/all/bold';
+import { Blockquote } from './extensions/all/blockquote';
+import { Code } from './extensions/all/code';
+import { Italic } from './extensions/all/italic';
+import { Underline } from './extensions/all/underline';
+import { Strike } from './extensions/all/strike';
+import { Gapcursor } from './extensions/all/gapcursor';
+import { TextAlign } from './extensions/all/text-align';
+import { TextStyle } from './extensions/all/text-style';
+import { HorizontalRule } from '@mui/icons-material';
+import { Dropcursor } from './extensions/all/dropcursor';
+import { TaskList } from './extensions/all/task-list';
+import { TaskItem } from './extensions/all/task-item';
+import { Placeholder } from './extensions/all/placeholder';
 
 
 export type UseRecommendedExtensionsOptions = {
