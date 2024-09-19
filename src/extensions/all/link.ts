@@ -2,9 +2,9 @@ import { Mark, markPasteRule, mergeAttributes } from '@tiptap/core'
 import { Plugin } from '@tiptap/pm/state'
 import { find, registerCustomProtocol, reset } from 'linkifyjs'
 
-import { autolink } from './helpers/autolink'
-import { clickHandler } from './helpers/clickHandler'
-import { pasteHandler } from './helpers/pasteHandler'
+// import { autolink } from './helpers/autolink'
+// import { clickHandler } from './helpers/clickHandler'
+// import { pasteHandler } from './helpers/pasteHandler'
 
 export interface LinkProtocolOptions {
   scheme: string;
@@ -174,31 +174,31 @@ export const Link = Mark.create<LinkOptions>({
   addProseMirrorPlugins() {
     const plugins: Plugin[] = []
 
-    if (this.options.autolink) {
-      plugins.push(
-        autolink({
-          type: this.type,
-          validate: this.options.validate,
-        }),
-      )
-    }
+    // if (this.options.autolink) {
+    //   plugins.push(
+    //     autolink({
+    //       type: this.type,
+    //       validate: this.options.validate,
+    //     }),
+    //   )
+    // }
 
-    if (this.options.openOnClick) {
-      plugins.push(
-        clickHandler({
-          type: this.type,
-        }),
-      )
-    }
+    // if (this.options.openOnClick) {
+    //   plugins.push(
+    //     clickHandler({
+    //       type: this.type,
+    //     }),
+    //   )
+    // }
 
-    if (this.options.linkOnPaste) {
-      plugins.push(
-        pasteHandler({
-          editor: this.editor,
-          type: this.type,
-        }),
-      )
-    }
+    // if (this.options.linkOnPaste) {
+    //   plugins.push(
+    //     pasteHandler({
+    //       editor: this.editor,
+    //       type: this.type,
+    //     }),
+    //   )
+    // }
 
     return plugins
   },

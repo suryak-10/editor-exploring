@@ -1,7 +1,7 @@
 import { mergeAttributes, Node, wrappingInputRule } from '@tiptap/core'
+import { ListItem } from './list-item'
+import { TextStyle } from './text-style'
 
-import ListItem from '../../extension-list-item/src'
-import TextStyle from '../../extension-text-style/src'
 
 export interface OrderedListOptions {
   itemTypeName: string,

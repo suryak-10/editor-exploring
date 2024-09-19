@@ -106,7 +106,7 @@ export default function EditorMenuControls() {
 
       <MenuDivider />
 
-      <MenuButtonHorizontalRule />
+      {/* <MenuButtonHorizontalRule /> */}
 
       <MenuButtonAddTable />
 

@@ -8,7 +8,7 @@
 // import { Dropcursor } from "@tiptap/extension-dropcursor";
 // import { Gapcursor } from "@tiptap/extension-gapcursor";
 // import { HardBreak } from "@tiptap/extension-hard-break";
-// import { History } from "@tiptap/extension-history";
+import { History } from "@tiptap/extension-history";
 // import { HorizontalRule } from "@tiptap/extension-horizontal-rule";
 // import { Italic } from "@tiptap/extension-italic";
 // import { Link } from "@tiptap/extension-link";
@@ -24,7 +24,7 @@
 // import { TableRow } from "@tiptap/extension-table-row";
 // import { TaskItem } from "@tiptap/extension-task-item";
 // import { TaskList } from "@tiptap/extension-task-list";
-// import { Text } from "@tiptap/extension-text";
+import { Text } from "@tiptap/extension-text";
 // import { TextAlign } from "@tiptap/extension-text-align";
 // import { TextStyle } from "@tiptap/extension-text-style";
 // import { Underline } from "@tiptap/extension-underline";
