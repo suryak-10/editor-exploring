@@ -37,6 +37,8 @@ import {
   ResizableImage,
   TableImproved,
 } from "mui-tiptap";
+import { FootnoteReference } from "./extensions/footnote/footnote-reference";
+import { ReferenceNode } from "./extensions/nodes/ReferenceNote";
 
 
 export type UseRecommendedExtensionsOptions = {
@@ -127,8 +129,8 @@ export default function useRecommendedExtensions({
       ListItem,
       OrderedList,
       Paragraph,
-      CustomSubscript,
-      CustomSuperscript,
+      // CustomSubscript,
+      // CustomSuperscript,
       Text,
 
       // Blockquote must come after Bold, since we want the "Cmd+B" shortcut to
@@ -184,6 +186,9 @@ export default function useRecommendedExtensions({
       // We use the regular `History` (undo/redo) extension when not using
       // collaborative editing
       History,
+      FootnoteReference,
+      ReferenceNode,
+      
     ];
   }, [placeholder]);
 }

@@ -50,9 +50,9 @@ export default function EditorMenuControls() {
 
       <MenuButtonStrikethrough />
 
-      <MenuButtonSubscript />
+      {/* <MenuButtonSubscript /> */}
 
-      <MenuButtonSuperscript />
+      {/* <MenuButtonSuperscript /> */}
 
       <MenuDivider />
 

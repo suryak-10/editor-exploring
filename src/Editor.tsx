@@ -12,8 +12,126 @@ import {
 import EditorMenuControls from "./EditorMenuControls";
 import useExtensions from "./useExtensions";
 
-const exampleContent =
-  '<h2 style="text-align: center">Hey there 👋</h2><p>This is a <em>basic</em> example of <code>mui-tiptap</code>, which combines <a target="_blank" rel="noopener noreferrer nofollow" href="https://tiptap.dev/">Tiptap</a> with customizable <a target="_blank" rel="noopener noreferrer nofollow" href="https://mui.com/">MUI (Material-UI)</a> styles, plus a suite of additional components and extensions! Sure, there are <strong>all <em>kinds</em> of <s>text</s> <u>formatting</u> options</strong> you’d probably expect from a rich text editor. But wait until you see the lists:</p><ul><li><p>That’s a bullet list with one …</p></li><li><p>… or two list items.</p></li></ul><p>Isn’t that great? And all of that is editable. But wait, there’s more. Let’s try a code block:</p><pre><code class="language-css">body {\n  display: none;\n}</code></pre><p></p><p>That’s only the tip of the iceberg. Feel free to add and resize images:</p><img height="auto" src="http://placekitten.com/g/500" alt="wat" width="257" style="aspect-ratio: 1 / 1"><p></p><p>Organize information in tables:</p><table><tbody><tr><th colspan="1" rowspan="1"><p>Name</p></th><th colspan="1" rowspan="1"><p>Role</p></th><th colspan="1" rowspan="1"><p>Team</p></th></tr><tr><td colspan="1" rowspan="1"><p>Alice</p></td><td colspan="1" rowspan="1"><p>PM</p></td><td colspan="1" rowspan="1"><p>Internal tools</p></td></tr><tr><td colspan="1" rowspan="1"><p>Bob</p></td><td colspan="1" rowspan="1"><p>Software</p></td><td colspan="1" rowspan="1"><p>Infrastructure</p></td></tr></tbody></table><p></p><p>Or write down your groceries:</p><ul data-type="taskList"><li data-checked="true" data-type="taskItem"><label><input type="checkbox" checked="checked"><span></span></label><div><p>Milk</p></div></li><li data-checked="false" data-type="taskItem"><label><input type="checkbox"><span></span></label><div><p>Eggs</p></div></li><li data-checked="false" data-type="taskItem"><label><input type="checkbox"><span></span></label><div><p>Sriracha</p></div></li></ul><blockquote><p>Wow, that’s amazing. Good work! 👏 <br>— Mom</p></blockquote><p>Give it a try and click around!</p>';
+const exampleContent = `
+<h2 style="text-align: center">Hey there 👋</h2>
+
+<reference><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id inventore obcaecati, necessitatibus fugit incidunt itaque iste quas quasi odio rem, consequatur recusandae libero a nulla ipsam ut earum accusantium eos!</p></reference>
+
+<p>
+  <sup id="fnref:1" contenteditable="false" draggable="true"><a class="footnote-ref"
+              data-id="0dd65b46-c6d1-492b-a532-396628f035c9" href="#fn:1" data-reference-number="1">1</a></sup><sup
+          id="fnref:2" contenteditable="false" draggable="true"><a class="footnote-ref"
+              data-id="96fea0b4-7a74-47f9-9ee7-aad9979b44f0" href="#fn:2" data-reference-number="2">2</a></sup>
+</p>
+
+<p>This is a
+    <em>basic</em> example of
+    <code>mui-tiptap</code>, which combines
+    <a target="_blank"
+        rel="noopener noreferrer nofollow" href="https://tiptap.dev/">Tiptap</a> with customizable
+    <a target="_blank"
+        rel="noopener noreferrer nofollow" href="https://mui.com/">MUI (Material-UI)</a> styles, plus a suite of
+    additional components and extensions! Sure, there are
+    <strong>all
+        <em>kinds</em> of
+        <s>text</s>
+        <u>formatting</u>
+        options
+    </strong> you’d probably expect from a rich text editor. But wait until you see the lists:
+</p>
+<ul>
+    <li>
+        <p>That’s a bullet list with one …</p>
+    </li>
+    <li>
+        <p>… or two list items.</p>
+    </li>
+</ul>
+<p>Isn’t that great? And all of that is editable. But wait, there’s more. Let’s try a code block:</p>
+<pre>
+    <code class="language-css">body {\n  display: none;\n}</code>
+</pre>
+<p></p>
+<p>That’s only the tip of the iceberg. Feel free to add and resize images:</p>
+<img height="auto"
+    src="http://placekitten.com/g/500" alt="wat" width="257" style="aspect-ratio: 1 / 1">
+    <p></p>
+    <p>Organize information in tables:</p>
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="1" rowspan="1">
+                    <p>Name</p>
+                </th>
+                <th colspan="1" rowspan="1">
+                    <p>Role</p>
+                </th>
+                <th colspan="1" rowspan="1">
+                    <p>Team</p>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>Alice</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>PM</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>Internal tools</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>Bob</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>Software</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>Infrastructure</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <p>Or write down your groceries:</p>
+    <ul data-type="taskList">
+        <li data-checked="true" data-type="taskItem">
+            <label>
+                <input type="checkbox" checked="checked">
+                    <span></span>
+                </label>
+                <div>
+                    <p>Milk</p>
+                </div>
+            </li>
+            <li data-checked="false" data-type="taskItem">
+                <label>
+                    <input type="checkbox">
+                        <span></span>
+                    </label>
+                    <div>
+                        <p>Eggs</p>
+                    </div>
+                </li>
+                <li data-checked="false" data-type="taskItem">
+                    <label>
+                        <input type="checkbox">
+                            <span></span>
+                        </label>
+                        <div>
+                            <p>Sriracha</p>
+                        </div>
+                    </li>
+                </ul>
+                <blockquote>
+                    <p>Wow, that’s amazing. Good work! 👏
+                        <br>— Mom
+                        </p>
+                    </blockquote>
+                    <p>Give it a try and click around!</p>
+`;
 
 export default function Editor() {
   const extensions = useExtensions({
