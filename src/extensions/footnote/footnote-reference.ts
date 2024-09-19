@@ -2,9 +2,26 @@ import { mergeAttributes, Node, Mark } from "@tiptap/core";
 import { v4 as uuid } from "uuid";
 
 
-const FOOTNOTE_REFERENCE_NAME = 'footnote-reference';
-const REF_CLASS = "footnote-ref";
+
+const FOOTNOTE_REFERENCE_NAME = 'footnoteReference';
+const REF_CLASS = "footnote-reference";
 const REFNUM_ATTR = "data-reference-number";
+export const FOOTNOTE_LIST = {
+    extensionName: "footnoteReference",
+    calssName: `footnote-list`,
+} as const
+
+declare module "@tiptap/core" {
+    interface Commands<ReturnType> {
+        [FOOTNOTE_LIST.extensionName]: {
+            /**
+             * add a new footnote reference
+             * @example editor.commands.addFootnote()
+             */
+            addFootnote: () => ReturnType;
+        };
+    }
+}
 
 export const FootnoteReference = Node.create({
     name: FOOTNOTE_REFERENCE_NAME,
@@ -54,6 +71,14 @@ export const FootnoteReference = Node.create({
         };
     },
 
+    addCommands() {
+        return {
+            addFootnote: () => ({ state, tr }) => {
+                const node = this.type.create();
+                return true;
+            }
+        }
+    },
 
     renderHTML({ HTMLAttributes }) {
         const { referenceNumber, ...attributes } = HTMLAttributes;

@@ -39,6 +39,8 @@ import {
 } from "mui-tiptap";
 import { FootnoteReference } from "./extensions/footnote/footnote-reference";
 import { ReferenceNode } from "./extensions/nodes/ReferenceNote";
+import { FOOTNOTE_LIST, FootnoteReferenceList } from "./extensions/footnote/footnote-list";
+import { FootnoteItem } from "./extensions/footnote/footnote-item";
 
 
 export type UseRecommendedExtensionsOptions = {
@@ -124,7 +126,9 @@ export default function useRecommendedExtensions({
 
       BulletList,
       CodeBlock,
-      Document,
+      Document.extend({
+        content: `block+ ${FOOTNOTE_LIST.extensionName}?`
+      }),
       HardBreak,
       ListItem,
       OrderedList,
@@ -186,8 +190,11 @@ export default function useRecommendedExtensions({
       // We use the regular `History` (undo/redo) extension when not using
       // collaborative editing
       History,
+      
       FootnoteReference,
-      ReferenceNode,
+      FootnoteItem,
+      FootnoteReferenceList,
+      // ReferenceNode,
       
     ];
   }, [placeholder]);

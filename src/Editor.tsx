@@ -24,6 +24,8 @@ const exampleContent = `
               data-id="96fea0b4-7a74-47f9-9ee7-aad9979b44f0" href="#fn:2" data-reference-number="2">2</a></sup>
 </p>
 
+
+
 <p>This is a
     <em>basic</em> example of
     <code>mui-tiptap</code>, which combines
@@ -131,6 +133,10 @@ const exampleContent = `
                         </p>
                     </blockquote>
                     <p>Give it a try and click around!</p>
+
+                    <ol class="footnote-list">
+                    <p>P tag is here</p>
+                    </ol>
 `;
 
 export default function Editor() {
