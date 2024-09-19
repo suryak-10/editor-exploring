@@ -35,6 +35,8 @@ export const Blockquote = Node.create<BlockquoteOptions>({
     }
   },
 
+  // isolating: true,
+
   content: 'block+',
 
   group: 'block',
@@ -54,7 +56,6 @@ export const Blockquote = Node.create<BlockquoteOptions>({
   addCommands() {
     return {
       setBlockquote: () => ({ commands }) => {
-        console.log("Hello surya");
         return commands.wrapIn(this.name)
       },
       toggleBlockquote: () => ({ commands }) => {

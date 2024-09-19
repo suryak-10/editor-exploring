@@ -36,6 +36,8 @@ export const underscorePasteRegex = /(?:^|\s)((?:__)((?:[^__]+))(?:__))/g
 export const Bold = Mark.create<BoldOptions>({
   name: 'bold',
 
+  allowGapCursor: true,
+
   addOptions() {
     return {
       HTMLAttributes: {},

@@ -65,6 +65,8 @@ import { Dropcursor } from './extensions/all/dropcursor';
 import { TaskList } from './extensions/all/task-list';
 import { TaskItem } from './extensions/all/task-item';
 import { Placeholder } from './extensions/all/placeholder';
+import { Page } from "./extensions/all/Page";
+import { Image } from "./extensions/all/image";
 
 
 export type UseRecommendedExtensionsOptions = {
@@ -129,6 +131,7 @@ export default function useRecommendedExtensions({
       // note in prosemirror-tables on the need to have these plugins be lower
       // precedence
       // https://github.com/ueberdosis/prosemirror-tables/blob/1a0428af3ca891d7db648ce3f08a2c74d47dced7/src/index.js#L26-L30
+      Page,
       TableImproved.configure({
         resizable: true,
       }),
@@ -195,7 +198,10 @@ export default function useRecommendedExtensions({
       FontSize,
       HorizontalRule,
 
-      ResizableImage,
+      Image.configure({
+        inline: true,
+      }),
+      // ResizableImage,
       // When images are dragged, we want to show the "drop cursor" for where they'll
       // land
       Dropcursor,
