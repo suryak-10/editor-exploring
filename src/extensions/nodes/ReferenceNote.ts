@@ -4,7 +4,7 @@ export const ReferenceNode = Node.create({
     name: 'reference',
     group: 'block',
     content: '(paragraph | blockquote)+',
-    
+
 
     parseHTML() {
         return [

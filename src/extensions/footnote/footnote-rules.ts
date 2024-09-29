@@ -5,10 +5,12 @@ export const FootnoteRules = Extension.create({
     name: 'footnoteRules',
     priority: 1000,
     addProseMirrorPlugins() {
+        const editor = this.editor;
         return [
             new Plugin({
                 key: new PluginKey("footnoteRules"),
                 filterTransaction(tr) {
+                    console.log(editor);
                     const { from, to } = tr.selection;
 
                     // allow transactions on the whole document

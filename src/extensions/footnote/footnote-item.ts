@@ -1,5 +1,6 @@
 import { Node } from "@tiptap/core";
 import ListItem from "@tiptap/extension-list-item";
+import { EditorState } from "@tiptap/pm/state";
 
 export const FOOTNOTE_ITEM_NAME = 'footnoteItem';
 
@@ -21,6 +22,7 @@ export const FootnoteItem = ListItem.extend({
     },
 
     addAttributes() {
+        EditorState
         return {
             id: {
                 isRequired: true,
