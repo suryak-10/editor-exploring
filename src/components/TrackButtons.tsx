@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { useRichTextEditorContext } from "mui-tiptap";
-import { DELETE_CONTENT_MARK_TYPE_NAME, INSERT_CONTENT_MARK_TYPE_NAME, TRACK_MARK_CHANGES_MARK_NAME } from "../extensions/TrackChanges";
+import { DELETE_CONTENT_MARK_TYPE_NAME, INSERT_CONTENT_MARK_TYPE_NAME, TRACK_MARK_CHANGES_MARK_NAME } from "../extensions/trakc-changes/track-changes";
 
 export default function TrackButtons() {
     const editor = useRichTextEditorContext();

@@ -37,7 +37,7 @@ import {
   ResizableImage,
   TableImproved,
 } from "mui-tiptap";
-import { TrackChangesExtension } from "./extensions/TrackChanges";
+import { TrackChangesExtension } from "./extensions/trakc-changes/track-changes";
 
 
 export type UseRecommendedExtensionsOptions = {

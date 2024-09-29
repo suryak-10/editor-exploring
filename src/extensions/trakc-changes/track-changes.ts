@@ -1,63 +1,10 @@
 import { Extension, Mark, } from "@tiptap/core"
 import { AddMarkStep, RemoveMarkStep, ReplaceStep, Step } from "@tiptap/pm/transform";
 import { Fragment, Slice } from "prosemirror-model";
+import { MARK_ADDED_CONTENT_MARK_TYPE_NAME, MARK_REMOVED_CONTENT_MARK_TYPE_NAME, TRACK_MARK_CHANGES_MARK_NAME, TrackMarkChangesMark } from "./track-mark-changes-mark";
+import { INSERT_CONTENT_MARK_TYPE_NAME, TRACK_CONTENT_CHANGES_MARK_NAME, TrackContentChangesMark } from "./track-content-change-mark";
 
 export const TRACK_CHANGES_EXTENSION_NAME = `trak-changes`;
-
-export const TRACK_CONTENT_CHANGES_MARK_NAME = `track-content`;
-export const INSERT_CONTENT_MARK_TYPE_NAME = `insert`;
-export const DELETE_CONTENT_MARK_TYPE_NAME = `delete`;
-
-export const TRACK_MARK_CHANGES_MARK_NAME = `track-mark`;
-export const MARK_ADDED_CONTENT_MARK_TYPE_NAME = `added`;
-export const MARK_REMOVED_CONTENT_MARK_TYPE_NAME = `removed`;
-
-const TrackContentChangesMark = Mark.create({
-    name: TRACK_CONTENT_CHANGES_MARK_NAME,
-    parseHTML() {
-        return [
-            {
-                tag: this.name
-            },
-        ]
-    },
-    addAttributes() {
-        return {
-            type: {
-                default: INSERT_CONTENT_MARK_TYPE_NAME,
-            }
-        };
-    },
-    renderHTML(props) {
-        return [this.name, props.HTMLAttributes, 0];
-    },
-});
-
-const TrackMarkChangesMark = Mark.create({
-    name: TRACK_MARK_CHANGES_MARK_NAME,
-    parseHTML() {
-        return [
-            {
-                tag: this.name
-            },
-        ]
-    },
-    addAttributes() {
-        return {
-            type: {
-                default: MARK_ADDED_CONTENT_MARK_TYPE_NAME,
-            },
-            marks: {
-                default: '',
-            }
-        };
-    },
-    renderHTML(props) {
-        return [this.name, props.HTMLAttributes, 0];
-    },
-});
-
-
 
 export const TrackChangesExtension = Extension.create({
     name: TRACK_CHANGES_EXTENSION_NAME,
