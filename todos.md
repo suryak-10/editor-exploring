@@ -1,3 +1,4 @@
 - [ ] Content change tracking
 - [ ] New node inserted tracking
 - [ ] Style change tracking
+- [ ] Reposition the carrot

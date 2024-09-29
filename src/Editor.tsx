@@ -49,7 +49,7 @@ export default function Editor() {
           editable={isEditable}
           renderControls={() => <EditorMenuControls />}
           onCreate={({ editor }) => {
-            // window.editor = editor;
+            window.editor = editor;
           }}
           RichTextFieldProps={{
             MenuBarProps: {

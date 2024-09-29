@@ -1,9 +1,19 @@
-track[type="insert"] {
+track-content[type="insert"] {
     color: green;
     text-decoration: underline;
 }
 
-track[type="delete"] {
+track-content[type="delete"] {
     color: red;
+    text-decoration: line-through;
+}
+
+track-mark[type="added"] {
+    color: blue;
+    text-decoration: underline;
+}
+
+track-mark[type="removed"] {
+    color: orange;
     text-decoration: line-through;
 }
