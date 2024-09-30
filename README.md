@@ -1,5 +1,14 @@
 # `mui-tiptap` demo
 
+### Added track changes extension
+
+#### Todos for that extension
+
+- [ ] Content change tracking
+- [ ] New node inserted tracking
+- [ ] Style change tracking
+- [ ] Reposition the carrot
+
 Interactive demonstration of `mui-tiptap`, a Material-UI (MUI) styled WYSIWYG rich text editor that uses Tiptap/ProseMirror.
 
 See:
