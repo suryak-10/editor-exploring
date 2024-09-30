@@ -40,12 +40,14 @@ export const TrackChangesExtension = Extension.create({
                     console.log(addMark);
                 } else {
                     const invertedStep = step.invert(editor.state.doc);
+                    console.log(invertedStep);
+                    
                     const nodes = invertedStep.slice.content.content as Fragment[];
                     const delMark = editor.schema.marks[TRACK_CONTENT_CHANGES_MARK_NAME];
-                    nodes.forEach(node => {
-                        node.marks.push(delMark.create({ type: DELETE_CONTENT_MARK_TYPE_NAME }))
-                        console.log(node);
-                    });
+                    // nodes.forEach(node => {
+                    //     node.marks.push(delMark.create({ type: DELETE_CONTENT_MARK_TYPE_NAME }))
+                    //     console.log(node);
+                    // });
                 }
             } else if (step instanceof AddMarkStep) {
                 const { from, to, mark } = step;
