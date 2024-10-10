@@ -9,6 +9,9 @@
 - [ ] Style change tracking
 - [ ] Reposition the carrot
 
+#### Marks
+- [ ] How to track if the user remvoed bold and applies itailc to the same slice.
+
 Interactive demonstration of `mui-tiptap`, a Material-UI (MUI) styled WYSIWYG rich text editor that uses Tiptap/ProseMirror.
 
 See:
