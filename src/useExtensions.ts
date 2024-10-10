@@ -37,6 +37,8 @@ import {
   ResizableImage,
   TableImproved,
 } from "mui-tiptap";
+import CharacterCountPlugin from "./extensions/character-count/CharacterCountPlugin";
+import CharacterCountExtension from "./extensions/character-count/CharacterCountExtension";
 
 
 export type UseRecommendedExtensionsOptions = {
@@ -180,7 +182,7 @@ export default function useRecommendedExtensions({
       Placeholder.configure({
         placeholder,
       }),
-
+      CharacterCountExtension,
       // We use the regular `History` (undo/redo) extension when not using
       // collaborative editing
       History,
