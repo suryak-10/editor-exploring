@@ -15,10 +15,10 @@ export const TrackMarkChangesMark = Mark.create({
     },
     addAttributes() {
         return {
-            type: {
-                default: MARK_ADDED_CONTENT_MARK_TYPE_NAME,
+            added: {
+                default: '',
             },
-            marks: {
+            removed: {
                 default: '',
             }
         };
