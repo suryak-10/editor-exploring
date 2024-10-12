@@ -1,18 +1,16 @@
-# `mui-tiptap` demo
+# `mui-tiptap` Track changes extension implementation
 
-### Added track changes extension
 
-#### Todos for that extension
+# List of tracking implemented on this extension
+## Mark changes tracking
 
-- [ ] Content change tracking
-- [ ] New node inserted tracking
-- [ ] Style change tracking
-- [ ] Reposition the carrot
+- [ ] New mark added annotation
+- [ ] Existing mark removed annotation
 
-Interactive demonstration of `mui-tiptap`, a Material-UI (MUI) styled WYSIWYG rich text editor that uses Tiptap/ProseMirror.
 
-See:
-- https://github.com/sjdemartini/mui-tiptap
-- https://www.npmjs.com/package/mui-tiptap
+## Content change
 
-Explore the `src/` directory in this CodeSandbox to get a sense of how to `mui-tiptap` can be used. `Editor.tsx` contains the primary component/logic used here.
+- [ ] New text inserted tracking
+- [ ] Existing text deleted tracking
+- [ ] New block node inserted tracking
+- [ ] New block node deleted tracking
