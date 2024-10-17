@@ -4,7 +4,9 @@ import React from 'react'
 
 export const CharacterCountPluginKey = new PluginKey('character-cout');
 
-const CharacterCountPlugin = new Plugin<{ characterCount: number }>({
+export type CharacterCountPluginState = { characterCount: number };
+
+const CharacterCountPlugin = new Plugin<CharacterCountPluginState>({
     key: CharacterCountPluginKey,
     state: {
         init(config, instance) {

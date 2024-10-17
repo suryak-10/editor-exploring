@@ -28,6 +28,7 @@ import {
   isTouchDevice,
   useRichTextEditorContext,
 } from "mui-tiptap";
+import ShowTextCount from "./components/ShowTextCount";
 
 export default function EditorMenuControls() {
   const editor = useRichTextEditorContext();
@@ -118,6 +119,7 @@ export default function EditorMenuControls() {
 
       <MenuButtonUndo />
       <MenuButtonRedo />
+      <ShowTextCount />
 
     </MenuControlsContainer>
   );
